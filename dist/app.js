@@ -7648,8 +7648,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * vue-datetime v1.0.0-beta.14
- * (c) 2020 Mario Juárez
+ * vue-datetime v2.0.0-beta.1
+ * (c) 2021 Mario Juárez
  * Released under the MIT License.
  */
 
@@ -8605,21 +8605,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }
   };
 
-  function plugin(Vue) {
-    Vue.component('datetime', Datetime);
-    Vue.component('datetime-popup', DatetimePopup);
-  }
+  var version = '2.0.0-beta.1';
 
-  // Install by default if using the script tag
-  if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(plugin);
-  }
+  var index = {
+    install: function install(app, options) {
+      app.component('datetime', Datetime);
+      app.component('datetime-popup', DatetimePopup);
+    }
+  };
 
-  var version = '1.0.0-beta.14';
-
-  exports['default'] = plugin;
-  exports.Datetime = Datetime;
-  exports.DatetimePopup = DatetimePopup;
+  exports['default'] = index;
   exports.version = version;
 
   Object.defineProperty(exports, '__esModule', { value: true });
