@@ -119,7 +119,7 @@
   },
   "peerDependencies": {
     "luxon": "^1.0.0",
-    "vue": "^2.3.0",
+    "vue": "^3.0.0",
     "weekstart": "^1.0.0"
   },
   "dllPlugin": {
